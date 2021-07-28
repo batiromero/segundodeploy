@@ -89,7 +89,7 @@ function Whiskys() {
       return <Loading />;
     } else {
     return (
-      <>
+      <div>
         <Nav />
         <NavCategories />
         <StyledDiv>
@@ -110,7 +110,7 @@ function Whiskys() {
                   <div class="row col justify-content-evenly">
                     {showProducts &&
                       showProducts.map(el => {
-                        return el.stock > 0 ? <>
+                        return el.stock > 0 ? <div>
                           <div class="justify-content-around align-items-center mb-3" style={style}>
                             <div class="card">
                               <div class="card-body">
@@ -154,7 +154,7 @@ function Whiskys() {
                               </div>
                             </div>
                           </div>
-                        </> : null
+                        </div> : null
                       })}
                   </div>
                   <div class="justify-content-center">
@@ -172,7 +172,7 @@ function Whiskys() {
           </div>
         </StyledDiv>
         <Footer />
-      </>
+      </div>
     );
   }
 }

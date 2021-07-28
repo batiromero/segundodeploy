@@ -66,7 +66,7 @@ function Varios() {
         return <Loading />;
     } else {
         return (
-            <>
+            <div>
                 <Nav />
                 <NavCategories />
                 <StyledDiv>
@@ -88,7 +88,7 @@ function Varios() {
                                     <div class="row col justify-content-evenly">
                                         {showProducts &&
                                             showProducts.map(el => {
-                                                return el.stock > 0 ? <>
+                                                return el.stock > 0 ? <div>
                                                     <div class="justify-content-around align-items-center mb-3" style={style}>
                                                         <div class="card">
                                                             <div class="card-body">
@@ -131,7 +131,7 @@ function Varios() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </> : null
+                                                </div> : null
                                             })}
                                     </div>
                                     <div class="justify-content-center">
@@ -143,7 +143,7 @@ function Varios() {
                     </div>
                 </StyledDiv>
                 <Footer />
-            </>
+            </div>
         );
     }
 }
